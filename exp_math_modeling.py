@@ -1,12 +1,12 @@
 import pandas as pd
-from experiments.exp_base import Exp_Base
+from exp_base import Exp_Base
 
 from data.math_modeling_loader import Dataset_Train, Dataset_Pred
 from torch.utils.data import DataLoader
 
 import torch.nn as nn
 
-from models.math_modeling.model import InformerStack
+from model import InformerStack
 
 import os
 import time
@@ -16,7 +16,7 @@ from utils.tools import EarlyStopping, adjust_learning_rate, StandardScaler
 
 from torch import optim
 import torch
-from utils.metrics import metric
+from metrics import metric
 
 class Exp_Math_Modeling(Exp_Base):
     def __int__(self,args):
